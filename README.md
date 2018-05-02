@@ -11,15 +11,25 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
   y - The position of the Y axis on the screen.
   
   w - Width.
+  
   h - Height.
+  
   path - String file path or URL path. If type of path is table then is playlist.
+  
   vol - Boolean representing on whether you can change the volume.
+  
   stop - Boolean representing on whether you can stop/pause the sound.
+  
   loop - Boolean representing whether the sound will be looped. To loop the sound, use true. Loop is not available for streaming sounds, only for sound files.
+  
   throttled - Boolean representing whether the sound will be throttled (i.e. given reduced download bandwidth). To throttle the sound, use true. Sounds will be throttled per default and only for URLs.
+  
   volume - Int volume of the sound.
+  
   speed - Int speed of the sound.
-  autostart - Boolean representing on whether player can start without you contest.
+  
+  autostart - Boolean representing on whether player can start without you contest
+  
   isRadio - Boolean representing on whether path is radioed.
   
   Returns a id of the created player.
