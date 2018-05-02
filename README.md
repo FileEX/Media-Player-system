@@ -11,31 +11,31 @@ The system is underway and contains some errors. It is also not finally finished
 createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,isRadio)
 ```
 
-  *__x -__ The position of the X axis on the screen.
+  * __x -__ The position of the X axis on the screen.
   
-  *__y -__ The position of the Y axis on the screen.
+  * __y -__ The position of the Y axis on the screen.
   
-  *__w -__ Width.
+  * __w -__ Width.
   
-  *__h -__ Height.
+  * __h -__ Height.
   
-  *__path -__ String file path or URL path. If type of path is table then is playlist.
+  * __path -__ String file path or URL path. If type of path is table then is playlist.
   
-  *__vol -__ Boolean representing on whether you can change the volume.
+  * __vol -__ Boolean representing on whether you can change the volume.
   
-  *__stop -__ Boolean representing on whether you can stop/pause the sound.
+  * __stop -__ Boolean representing on whether you can stop/pause the sound.
   
-  *__loop -__ Boolean representing whether the sound will be looped. To loop the sound, use true. Loop is not available for streaming sounds, only for sound files.
+  * __loop -__ Boolean representing whether the sound will be looped. To loop the sound, use true. Loop is not available for streaming sounds, only for sound files.
   
-  *__throttled -__ Boolean representing whether the sound will be throttled (i.e. given reduced download bandwidth). To throttle the sound, use true. Sounds will be throttled per default and only for URLs.
+  * __throttled -__ Boolean representing whether the sound will be throttled (i.e. given reduced download bandwidth). To throttle the sound, use true. Sounds will be throttled per default and only for URLs.
   
-  *__volume -__ Int volume of the sound.
+  * __volume -__ Int volume of the sound.
   
-  *__speed -__ Int speed of the sound.
+  * __speed -__ Int speed of the sound.
   
-  *__autostart -__ Boolean representing on whether player can start without you contest
+  * __autostart -__ Boolean representing on whether player can start without you contest
   
-  *__isRadio -__ Boolean representing on whether path is radioed.
+  * __isRadio -__ Boolean representing on whether path is radioed.
   
   Returns a id of the created player.
   
@@ -44,7 +44,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
  destroyMediaPlayer(id)
  ```
  
-  *__id -__ The ID of the media player which you want destroy.
+  * __id -__ The ID of the media player which you want destroy.
   
   ### Function: `setMediaPlayerVolume`
   
@@ -52,8 +52,8 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
  setMediaPlayerVolume(id, volume)
  ```
  
-  *__id -__ The ID of the media player which you want change volume.
-  *__volume -__ A floating point number representing the desired volume level.
+  * __id -__ The ID of the media player which you want change volume.
+  * __volume -__ A floating point number representing the desired volume level.
   
   ### Function: `getMediaPlayerVolume`
   
@@ -61,7 +61,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
  getMediaPlayerVolume(id)
  ```
  
-  *__id -__ The ID of the media player which you want get volume.
+  * __id -__ The ID of the media player which you want get volume.
   
   Returns a volume of media player.
  
@@ -71,8 +71,8 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
  setMediaPlayerPath(id,path)
  ```
  
-  *__id -__ The ID of the media player which you want change path.
-  *__path -__ - String file path or URL path. If type of path is table then is playlist
+  * __id -__ The ID of the media player which you want change path.
+  * __path -__ - String file path or URL path. If type of path is table then is playlist
   
   ### Function: `getMediaPlayerPath`
   
@@ -80,7 +80,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
  getMediaPlayerPath(id)
  ```
  
-  *__id -__ The ID of the media player which you want get path.
+  * __id -__ The ID of the media player which you want get path.
   
   Returns a path of media player.
   
@@ -90,8 +90,8 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
  setMediaPlayerLoop(id, loop)
  ```
  
-  *__id -__ The ID of the media player which you want change loop.
-  *__loop -__ Boolean representing whether the sound will be looped. To loop the sound, use true. Loop is not available for streaming sounds, only for sound files.
+  * __id -__ The ID of the media player which you want change loop.
+  * __loop -__ Boolean representing whether the sound will be looped. To loop the sound, use true. Loop is not available for streaming sounds, only for sound files.
   
   ### Function: `getMediaPlayerLoop`
   
@@ -99,7 +99,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
  getMediaPlayerLoop(id)
  ```
  
-  *__id -__ The ID of the media player which you want get loop.
+  * __id -__ The ID of the media player which you want get loop.
   
   Returns the loop of the media player.
   
@@ -109,8 +109,8 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
 pauseMediaPlayer(id, pause)
 ```
 
-  *__id -__ The ID of the media player which you want change paused value.
-  *__pause -__ The boolean representing whether the sound should be paused.
+  * __id -__ The ID of the media player which you want change paused value.
+  * __pause -__ The boolean representing whether the sound should be paused.
   
   ### Function: `isMediaPlayerPaused`
   
@@ -118,7 +118,7 @@ pauseMediaPlayer(id, pause)
  isMediaPlayerPaused(id)
  ```
  
-  *__id -__ The ID of the media player which you want get paused value.
+  * __id -__ The ID of the media player which you want get paused value.
   
   Returns a boolean representing whether the media player is paused.
   
@@ -128,8 +128,8 @@ pauseMediaPlayer(id, pause)
  setMediaPlayerSpeed(id, speed)
  ```
  
-  *__id -__ The ID of the media player which you want change speed.
-  *__speed -__ Floating point number representing the desired sound playback speed.
+  * __id -__ The ID of the media player which you want change speed.
+  * __speed -__ Floating point number representing the desired sound playback speed.
   
   ### Function: `getMediaPlayerSpeed`
   
@@ -137,7 +137,7 @@ pauseMediaPlayer(id, pause)
  getMediaPlayerSpeed(id)
  ```
  
-  *__id -__ The ID of the media player which you want get speed.
+  * __id -__ The ID of the media player which you want get speed.
   
  setMediaPlayerSpeed and getMediaPlayerSpeed do not work correctly yet. This will fixed soon.
   
