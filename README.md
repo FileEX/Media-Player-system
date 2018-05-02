@@ -4,7 +4,7 @@ The system is underway and contains some errors. It is also not finally finished
 
 ## Functions: 
 
-###Function `createMediaPlayer`
+### Function: `createMediaPlayer`
 
 ```lua
 
@@ -39,14 +39,14 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
   
   Returns a id of the created player.
   
-  ###Function: `destroyMediaPlayer`
+  ### Function: `destroyMediaPlayer`
   ```lua
  destroyMediaPlayer(id)
  ```
  
   *__id -__ The ID of the media player which you want destroy.
   
-  ###Function: `setMediaPlayerVolume`
+  ### Function: `setMediaPlayerVolume`
   
  ```lua
  setMediaPlayerVolume(id, volume)
@@ -55,7 +55,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
   *__id -__ The ID of the media player which you want change volume.
   *__volume -__ A floating point number representing the desired volume level.
   
-  ###Function: `getMediaPlayerVolume`
+  ### Function: `getMediaPlayerVolume`
   
   ```lua
  getMediaPlayerVolume(id)
@@ -65,7 +65,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
   
   Returns a volume of media player.
  
- ###Function: `setMediaPlayerPath`
+ ### Function: `setMediaPlayerPath`
  
  ```lua
  setMediaPlayerPath(id,path)
@@ -74,7 +74,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
   *__id -__ The ID of the media player which you want change path.
   *__path -__ - String file path or URL path. If type of path is table then is playlist
   
-  ###Function: `getMediaPlayerPath`
+  ### Function: `getMediaPlayerPath`
   
   ```lua
  getMediaPlayerPath(id)
@@ -84,7 +84,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
   
   Returns a path of media player.
   
-  ###Function: `setMediaPlayerLoop`
+  ### Function: `setMediaPlayerLoop`
   
  ```lua
  setMediaPlayerLoop(id, loop)
@@ -93,7 +93,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
   *__id -__ The ID of the media player which you want change loop.
   *__loop -__ Boolean representing whether the sound will be looped. To loop the sound, use true. Loop is not available for streaming sounds, only for sound files.
   
-  ###Function: `getMediaPlayerLoop`
+  ### Function: `getMediaPlayerLoop`
   
  ```lua
  getMediaPlayerLoop(id)
@@ -103,7 +103,7 @@ createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,is
   
   Returns the loop of the media player.
   
-  ###Function: `pauseMediaPlayer`
+  ### Function: `pauseMediaPlayer`
   
   ```lua  
 pauseMediaPlayer(id, pause)
@@ -112,7 +112,7 @@ pauseMediaPlayer(id, pause)
   *__id -__ The ID of the media player which you want change paused value.
   *__pause -__ The boolean representing whether the sound should be paused.
   
-  ###Function: `isMediaPlayerPaused`
+  ### Function: `isMediaPlayerPaused`
   
   ```lua
  isMediaPlayerPaused(id)
@@ -122,7 +122,7 @@ pauseMediaPlayer(id, pause)
   
   Returns a boolean representing whether the media player is paused.
   
-  ###Function `setMediaPlayerSpeed`
+  ### Function `setMediaPlayerSpeed`
   
   ```lua
  setMediaPlayerSpeed(id, speed)
@@ -131,7 +131,7 @@ pauseMediaPlayer(id, pause)
   *__id -__ The ID of the media player which you want change speed.
   *__speed -__ Floating point number representing the desired sound playback speed.
   
-  ###Function: `getMediaPlayerSpeed`
+  ### Function: `getMediaPlayerSpeed`
   
   ```lua
  getMediaPlayerSpeed(id)
