@@ -5,8 +5,11 @@ The system is underway and contains some errors. It is also not finally finished
 List of functions:
 
 createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,isRadio)
+
   x - The position of the X axis on the screen.
+  
   y - The position of the Y axis on the screen.
+  
   w - Width.
   h - Height.
   path - String file path or URL path. If type of path is table then is playlist.
