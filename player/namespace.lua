@@ -1,0 +1,4 @@
+--[[
+    Author: FileEX
+]]
+player = {};

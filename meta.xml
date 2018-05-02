@@ -1,0 +1,17 @@
+<meta>
+    <info author="FileEX" description="Media Player System" version="1.0 alpha" type="script" />
+    <script src="player/namespace.lua" type="client" />
+    <script src="player/player.lua" type="client" />
+    <script src="player/media.lua" type="client" />
+    <script src="utils.lua" type="client" />
+    <script src="sourceC.lua" type="client" />
+
+    <file src="resources/next.png" />
+    <file src="resources/pause.png" />
+    <file src="resources/start.png" />
+    <file src="resources/volume.png" />
+    <file src="resources/mute_volume.png" />
+    <file src="resources/settings.png" />
+    
+    <oop>true</oop>
+</meta>
