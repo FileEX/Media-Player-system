@@ -227,7 +227,7 @@ function player.media.__constructor()
         dxDrawImage(this.getProperty(id,'x') + 30,this.getProperty(id,'y') + 35,25,25,tx[3],0,0,0,0xFFFFFFFF,true);
         dxDrawImage(this.getProperty(id,'x') + 61,this.getProperty(id,'y') + 35,25,25,(this.getProperty(id,'volume') > 0 and tx[4] or tx[5]),0,0,0,0xFFFFFFFF,true);
         dxDrawRectangle(this.getProperty(id,'x') + 95,this.getProperty(id,'y') + 40,((this.getAttribute(id,'volumeBarWidth'))),11,0xFF101010,true);
-        dxDrawRectangle(this.getProperty(id,'x') + 95,this.getProperty(id,'y') + 40,((this.getAttribute(id,'volumeBarWidth')) * vl,11,0xFFFFFFFF,true);
+        dxDrawRectangle(this.getProperty(id,'x') + 95,this.getProperty(id,'y') + 40,((this.getAttribute(id,'volumeBarWidth'))) * vl,11,0xFFFFFFFF,true);
         dxDrawText(time,(this.getProperty(id,'x') + 120) + (this.getAttribute(id,'xp')),this.getProperty(id,'y') + 37,80,60,0xFFFFFFFF,1.0,"default","left","top",false,false,true,false,false,0,0)
         dxDrawImage(this.getProperty(id,'x') + 320,this.getProperty(id,'y') + 35,25,25,tx[6],this.getAttribute(id,'settingsRot'),0,0,0xFFFFFFFF,true);
     end
