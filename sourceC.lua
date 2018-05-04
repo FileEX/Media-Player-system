@@ -2,6 +2,7 @@
     Author: FileEX
 ]]
 local screen = Vector2(guiGetScreenSize());
+
 local isPlayer = false;
 
 function createMediaPlayer(x,y,w,h,path,vol,stop,loop,throttled,volume,speed,autostart,isRadio)
@@ -184,7 +185,7 @@ function click(btn,state)
                     if newPlayer.getAttribute(id,'openSound') then
                         local cx,_ = getCursorPosition();
                         local ax = (cx * screen.x);
-                        local x = math.floor((newPlayer.getProperty(id,'x') + 95);
+                        local x = math.floor((newPlayer.getProperty(id,'x') + 95));
                         local w = math.floor((newPlayer.getAttribute(id,'volumeBarWidth')));
                         local mat = (ax - x) / w;
                         local mat = mat < 0 and 0 or (mat > 1 and 1 or mat);
@@ -209,6 +210,6 @@ local playlista = {
     {"http://www.miastomuzyki.pl/n/rmfbaby.pls"},
 }
 
-createMediaPlayer(screen.x/2,screen.y/2,200,60,playlista,true,true,false,false,1.0,1.0,true,true)
+createMediaPlayer(screen.x/2 - 240,screen.y/2,200,21,playlista,true,true,false,false,1.0,1.0,true,true)
 
 showCursor(true)
