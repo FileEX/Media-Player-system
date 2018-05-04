@@ -1,5 +1,5 @@
 --[[
-    Author: FileEX
+    Author: FileEX (Discord: FileEX#3656)
 ]]
 local screen = Vector2(guiGetScreenSize());
 
