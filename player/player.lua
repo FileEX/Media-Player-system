@@ -1,7 +1,7 @@
 --[[
-     Author: FileEX (Discord: FileEX#3656)
+    Author: FileEX
 ]]
-player.Player = {}
+player.Player = {};
 
 setmetatable(player.Player, {
     __index = player.Player,
@@ -14,12 +14,12 @@ player.Player.ID = 0;
 
 function player.Player.setID()
     player.Player.ID = player.Player.ID + 1;
-    return 'player.Player.__'..player.Player.ID;
+    return player.Player.ID;
 end
 
 function player.Player.__constructor()
-    local this = setmetatable({},player.Player)
-    local _id = player.Player.setID()
+    local this = setmetatable({},{player.Player, __index = player.Player});
+    local _id = player.Player.setID();
 
     this.getID = function()
     return _id;

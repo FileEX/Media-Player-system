@@ -1,5 +1,5 @@
 --[[
-     Author: FileEX (Discord: FileEX#3656)
+    Author: FileEX
 ]]
 local screen = Vector2(guiGetScreenSize());
 player.media = {};
@@ -25,7 +25,7 @@ function player.media.__constructor()
 
     this.isSound = function(id)
         if id then
-            if this.getAttribute(id,'sound') ~= nil then
+            if this.getAttribute(id, 'sound') and isElement(this.getAttribute(id, 'sound')) and this.getAttribute(id,'sound') ~= nil then
                 return this.getAttribute(id,'sound')
             else
                 return false;
@@ -110,7 +110,7 @@ function player.media.__constructor()
 
     this.setMediaPause = function(id,pause)
         if id then
-            if this.isSound(id) then
+            if this.isSound(id) and isElement(this.isSound(id)) then
             if pause then
                 if this.getAttribute(id,'played') and not this.getAttribute(id,'stopped') then
                     this.setAttribute(id,'played',false);
@@ -182,14 +182,18 @@ function player.media.__constructor()
         if not this.isSound(id) then
             w = 0;
         else
-            w = (this.isSound(id).playbackPosition ~= 0 and (this.isSound(id).playbackPosition / this.isSound(id).length) or 0);
+            if this.isSound(id) and isElement(this.isSound(id)) then
+                w = (this.isSound(id).playbackPosition ~= 0 and (this.isSound(id).playbackPosition / this.isSound(id).length) or 0);
+            end
         end
         if not this.isSound(id) then
             time = "00:00:00/00:00:00";
         else
-            time = string.format("%02d:%02d:%02d/%02d:%02d:%02d",math.floor(this.isSound(id).playbackPosition / 3600), (math.floor(this.isSound(id).playbackPosition / 60) <= 59 and math.floor(this.isSound(id).playbackPosition / 60) or math.floor(this.isSound(id).playbackPosition % 60)),(math.floor(this.isSound(id).playbackPosition) <= 59 and math.floor(this.isSound(id).playbackPosition) or math.floor(this.isSound(id).playbackPosition % 60)),math.floor(this.isSound(id).length / 3600), math.floor(this.isSound(id).length / 60), math.floor(this.isSound(id).length % 60));
+            if this.isSound(id) and isElement(this.isSound(id)) then
+                time = string.format("%02d:%02d:%02d/%02d:%02d:%02d",math.floor(this.isSound(id).playbackPosition / 3600), (math.floor(this.isSound(id).playbackPosition / 60) <= 59 and math.floor(this.isSound(id).playbackPosition / 60) or math.floor(this.isSound(id).playbackPosition % 60)),(math.floor(this.isSound(id).playbackPosition) <= 59 and math.floor(this.isSound(id).playbackPosition) or math.floor(this.isSound(id).playbackPosition % 60)),math.floor(this.isSound(id).length / 3600), math.floor(this.isSound(id).length / 60), math.floor(this.isSound(id).length % 60));
+            end
         end
-        if this.isSound(id) and this.isSound(id).playbackPosition > 0 then
+        if this.isSound(id) and isElement(this.isSound(id)) and this.isSound(id).playbackPosition > 0 then
             if this.getAttribute(id,'setIndex') then
                 this.setAttribute(id,'setIndex',false);
             end
@@ -198,6 +202,9 @@ function player.media.__constructor()
             if this.isSound(id) then
                 if this.isSound(id).playbackPosition ~= 0 then
                     if math.floor(this.isSound(id).playbackPosition) == math.floor(this.isSound(id).length) and not this.getAttribute(id,'setIndex') and not this.getAttribute(id,'isRadio') then
+                        if not this.getProperty(id, 'loop') then
+                            this.setMediaPause(id,true);
+                        end
                         this.setAttribute(id,'setIndex',true);
                         local newIndex = (this.getProperty(id,'playlistIndex') + 1 <= #this.getProperty(id,'playlist') and this.setProperty(id,'playlistIndex',this.getProperty(id,'playlistIndex') + 1) or this.setProperty(id,'playlistIndex',1));
                         this.setPlaylistIndex(id,newIndex);
